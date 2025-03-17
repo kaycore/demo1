@@ -355,6 +355,7 @@ a {
 
     &__li {
       color: $primary-color;
+      font-family: $nav-font;
       text-transform: capitalize;
 
       &:hover {

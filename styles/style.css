@@ -309,6 +309,7 @@ a {
 }
 .hdr .nav__li {
   color: #212529;
+  font-family: "Inter", sans-serif;
   text-transform: capitalize;
 }
 .hdr .nav__li:hover {
