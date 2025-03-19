@@ -178,6 +178,8 @@ $nav-font: "Inter", sans-serif;
     transform: translate(-50%, 0);
     margin-left: 0 !important;
     margin-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 
     &__burger-con {
       display: none !important;
@@ -194,6 +196,7 @@ $nav-font: "Inter", sans-serif;
   }
   .hdr .btn {
     padding: 10px 20px;
+    margin-left: 0 !important;
   }
   .about-sec .sec-inner {
     display: flex;
@@ -351,15 +354,50 @@ a {
     &__ls {
       display: flex;
       gap: 30px;
+      padding: 0;
+      margin: 0;
     }
 
     &__li {
       color: $primary-color;
       font-family: $nav-font;
+      padding: 26px 0;
       text-transform: capitalize;
 
       &:hover {
         color: $accent-color;
+      }
+    }
+
+    #nav__dropdown {
+      position: relative;
+      cursor: pointer;
+
+      &:hover ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      ul {
+        background-color: color-mix(in srgb, $bg-color 95%, transparent);
+        display: none;
+        list-style-type: none;
+        padding: 20px;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 4px #0000000e, 0 8px 8px #0000000e;
+
+        a {
+          color: $primary-color;
+          font-family: $nav-font;
+          &:hover {
+            color: $accent-color;
+          }
+        }
       }
     }
   }
