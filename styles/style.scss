@@ -356,10 +356,12 @@ a {
       gap: 30px;
       padding: 0;
       margin: 0;
+      list-style-type: none;
     }
 
-    &__li {
+    &__li a {
       color: $primary-color;
+      display: block;
       font-family: $nav-font;
       padding: 26px 0;
       text-transform: capitalize;
@@ -370,32 +372,45 @@ a {
     }
 
     #nav__dropdown {
-      position: relative;
+      align-items: center;
+      color: $primary-color;
       cursor: pointer;
+      display: flex;
+      font-family: $nav-font;
+      position: relative;
+      text-transform: capitalize;
 
-      &:hover ul {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
+      &:hover {
+        color: $accent-color;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        }
       }
 
       ul {
         background-color: color-mix(in srgb, $bg-color 95%, transparent);
+        border-radius: 5px;
+        box-shadow: 0 4px 4px #0000000e, 0 8px 8px #0000000e;
         display: none;
         list-style-type: none;
-        padding: 20px;
         margin: 0;
+        padding: 20px;
         position: absolute;
         top: 100%;
         width: 200px;
-        border-radius: 5px;
-        box-shadow: 0 4px 4px #0000000e, 0 8px 8px #0000000e;
 
-        a {
-          color: $primary-color;
-          font-family: $nav-font;
-          &:hover {
-            color: $accent-color;
+        li {
+          a {
+            color: $primary-color;
+            font-family: $nav-font;
+            padding: 0;
+
+            &:hover {
+              color: $accent-color;
+            }
           }
         }
       }
@@ -515,6 +530,7 @@ a {
         color: $heading-color;
         font-family: $heading-font;
         font-weight: 700;
+        font-size: large;
         margin: 0;
         padding-bottom: 10px;
         text-transform: capitalize;

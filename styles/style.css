@@ -311,19 +311,29 @@ a {
   gap: 30px;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
-.hdr .nav__li {
+.hdr .nav__li a {
   color: #212529;
+  display: block;
   font-family: "Inter", sans-serif;
   padding: 26px 0;
   text-transform: capitalize;
 }
-.hdr .nav__li:hover {
+.hdr .nav__li a:hover {
   color: #0d83fd;
 }
 .hdr .nav #nav__dropdown {
-  position: relative;
+  align-items: center;
+  color: #212529;
   cursor: pointer;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  text-transform: capitalize;
+}
+.hdr .nav #nav__dropdown:hover {
+  color: #0d83fd;
 }
 .hdr .nav #nav__dropdown:hover ul {
   display: flex;
@@ -332,21 +342,22 @@ a {
 }
 .hdr .nav #nav__dropdown ul {
   background-color: color-mix(in srgb, #ffffff 95%, transparent);
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.0549019608), 0 8px 8px rgba(0, 0, 0, 0.0549019608);
   display: none;
   list-style-type: none;
-  padding: 20px;
   margin: 0;
+  padding: 20px;
   position: absolute;
   top: 100%;
   width: 200px;
-  border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.0549019608), 0 8px 8px rgba(0, 0, 0, 0.0549019608);
 }
-.hdr .nav #nav__dropdown ul a {
+.hdr .nav #nav__dropdown ul li a {
   color: #212529;
   font-family: "Inter", sans-serif;
+  padding: 0;
 }
-.hdr .nav #nav__dropdown ul a:hover {
+.hdr .nav #nav__dropdown ul li a:hover {
   color: #0d83fd;
 }
 .hdr .btn {
@@ -443,6 +454,7 @@ a {
   color: #2d465e;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
+  font-size: large;
   margin: 0;
   padding-bottom: 10px;
   text-transform: capitalize;
